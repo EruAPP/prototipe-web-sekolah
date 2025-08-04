@@ -17,3 +17,23 @@ document.addEventListener("click", function (e) {
     navbarNav.classList.remove("active");
   }
 });
+
+// slider otomatis
+const slider = document.querySelector(".slider");
+const images = document.querySelectorAll(".slider img");
+const totalImages = images.length;
+
+let index = 0;
+
+function slideToIndex(i) {
+  const imageWidth = images[0].clientWidth;
+  slider.scrollTo({
+    left: i * imageWidth,
+    behavior: "smooth",
+  });
+}
+
+setInterval(() => {
+  index = (index + 1) % totalImages; // loop kembali ke gambar pertama
+  slideToIndex(index);
+}, 5000); // 5 detik

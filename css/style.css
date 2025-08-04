@@ -14,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 7.8rem;
 }
 
 body {
@@ -27,7 +28,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.4rem 7%;
+  padding: 1.2rem 7%;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -37,13 +38,28 @@ body {
 }
 
 .navbar .navbar-logo {
+  display: flex;
   font-size: 2rem;
   font-weight: 700;
   color: black;
+  align-items: center;
 }
 
-.navbar .navbar-logo span {
+.navbar .navbar-logo img {
+  width: 4rem;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.navbar .navbar-logo .text-nav {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.navbar .navbar-logo .text-nav span {
+  font-weight: 400;
   color: var(--primary);
+  font-size: 1.2rem;
 }
 
 .navbar .navbar-nav a {
@@ -54,32 +70,36 @@ body {
 }
 
 /* Nav Kreativitas */
-ul {
+.navbar .navbar-nav ul {
   list-style: none;
 }
 
-ul li {
-  display: inline-block;
+.navbar .navbar-nav ul li {
   position: relative;
+  float: left;
+  margin-bottom: 0.5rem;
 }
 
-ul li ul.dropdown li {
-  display: block;
-  margin-top: 0.4rem;
-  margin-bottom: 0.4rem;
-  text-align: center;
+.navbar .navbar-nav ul li:hover > ul {
+  display: initial;
 }
 
-ul li ul.dropdown {
-  width: 100%;
-  background: white;
-  position: absolute;
-  z-index: 9998;
+.navbar .navbar-nav ul li ul {
   display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 13rem;
+  background: white;
 }
 
-ul li:hover ul.dropdown {
-  display: block;
+.navbar .navbar-nav ul li ul li {
+  width: 100%;
+}
+
+.navbar .navbar-nav ul li ul li ul {
+  left: 13rem;
+  top: 0;
 }
 
 /* Akhir Nav Kreativitas */
@@ -176,10 +196,60 @@ ul li:hover ul.dropdown {
   text-shadow: 1px 1px 3px rgba(255, 255, 255);
 }
 
+/* Main 2 | Slider */
+.container {
+  padding: 2rem;
+}
+
+.container .slider-wraper {
+  position: relative;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.container .slider-wraper .slider {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+}
+
+.container .slider-wraper .slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.container .slider-wraper .slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.container .slider-wraper .slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.container .slider-wraper .slider-nav a:hover {
+  opacity: 1;
+}
+
 /* Berita Sekolah dan galeri*/
 .nschool,
 .kontak {
-  padding: 8rem 7% 1.4rem;
+  padding: 1rem 7% 1.4rem;
   min-height: 100vh;
 }
 
@@ -219,7 +289,6 @@ ul li:hover ul.dropdown {
 }
 
 .nschool .row .content p {
-  margin-bottom: 0.8rem;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.6;
@@ -228,7 +297,7 @@ ul li:hover ul.dropdown {
 /* Galeri Section */
 .galeri {
   background: var(--primary);
-  padding: 8rem 7% 1.4rem;
+  padding: 1rem 7% 1.4rem;
   min-height: 100vh;
 }
 
@@ -402,12 +471,12 @@ footer .credit a {
     width: 100%;
   }
 
-  .navbar .navbar-nav ul li ul {
+  .navbar .navbar-nav ul li ul li {
     background: #eee;
   }
 
-  .navbar .navbar-nav ul li ul li {
-    width: 100%;
+  .navbar .navbar-nav ul li ul li ul {
+    left: 0;
   }
 
   .navbar .navbar-nav.active {
@@ -418,8 +487,8 @@ footer .credit a {
   .navbar .navbar-nav a {
     color: black;
     display: block;
-    margin: 0.5rem;
-    padding: 0.5rem;
+    margin: 0.2rem;
+    padding: 0.2rem;
     font-size: 1.2rem;
   }
 
