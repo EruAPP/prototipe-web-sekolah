@@ -135,7 +135,7 @@ body {
 }
 
 /* Bagian Main Section */
-.main1 {
+/* .main1 {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -194,22 +194,21 @@ body {
   background-color: var(--primary);
   border-radius: 1rem;
   text-shadow: 1px 1px 3px rgba(255, 255, 255);
-}
+} */
 
 /* Main 2 | Slider */
 .container {
-  padding: 2rem;
+  padding: 8rem 1rem 3rem;
 }
 
 .container .slider-wraper {
   position: relative;
-  max-width: 75rem;
   margin: 0 auto;
 }
 
 .container .slider-wraper .slider {
   display: flex;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 6;
   overflow: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -219,6 +218,7 @@ body {
 
 .container .slider-wraper .slider img {
   flex: 1 0 100%;
+  width: 100%;
   scroll-snap-align: start;
   object-fit: cover;
 }
@@ -250,7 +250,6 @@ body {
 .nschool,
 .kontak {
   padding: 1rem 7% 1.4rem;
-  min-height: 100vh;
 }
 
 .nschool h2,
