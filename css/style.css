@@ -198,7 +198,8 @@ body {
 
 /* Main 2 | Slider */
 .container {
-  padding: 8rem 1rem 3rem;
+  padding: 8rem 1rem 0;
+  margin-bottom: 3rem;
 }
 
 .container .slider-wraper {
@@ -246,6 +247,56 @@ body {
   opacity: 1;
 }
 
+/* Pilih Sekolah */
+
+.choose {
+  margin-bottom: 2rem;
+}
+.choose .choose-school {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1.2rem;
+}
+
+.choose .choose-school .card-pilih {
+  background-color: white;
+  width: 20rem;
+  height: 25rem;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 2px 0.5rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.choose .choose-school .card-pilih img {
+  width: 100%;
+  height: 21rem;
+  object-fit: cover;
+  display: block;
+}
+
+.choose .choose-school .card-pilih .info {
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+.choose .choose-school .card-pilih .info h3 {
+  margin: 0 0 0, 8rem;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.choose .choose-school .card-pilih .info .address {
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
 /* Berita Sekolah dan galeri*/
 .nschool,
 .kontak {
@@ -254,14 +305,16 @@ body {
 
 .nschool h2,
 .galeri h2,
-.kontak h2 {
+.kontak h2,
+.choose h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 2rem;
 }
 
 .nschool h2 span,
-.kontak h2 span {
+.kontak h2 span,
+.choose h2 span {
   color: var(--primary);
 }
 
