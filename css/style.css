@@ -248,8 +248,8 @@ body {
 }
 
 /* Pilih Sekolah */
-
-.choose {
+.choose,
+.news {
   margin-bottom: 2rem;
 }
 .choose .choose-school {
@@ -299,7 +299,8 @@ body {
 
 /* Berita Sekolah dan galeri*/
 .nschool,
-.kontak {
+.kontak,
+.news {
   padding: 1rem 7% 1.4rem;
 }
 
@@ -344,6 +345,76 @@ body {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.6;
+}
+
+/* Berita Terbaru */
+.news .title {
+  background-color: var(--primary);
+  color: white;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  border-radius: 0.2rem 0.2rem 0 0;
+}
+
+.news .line {
+  border-top: 0.3rem solid var(--primary);
+  margin-bottom: 1rem;
+}
+
+.news .news-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.news .news-container .main-news {
+  flex: 1 1 45rem;
+}
+
+.news .news-container .main-news img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.news .news-container .main-news h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.news .news-container .main-news p {
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.news .news-container .side-news {
+  flex: 1 1 35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 20rem;
+}
+
+.news .news-container .side-news .side-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.news .news-container .side-news .side-item img {
+  width: 15rem;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+.news .news-container .side-news .side-item p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
 }
 
 /* Galeri Section */
