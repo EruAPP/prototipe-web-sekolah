@@ -37,3 +37,20 @@ setInterval(() => {
   index = (index + 1) % totalImages; // loop kembali ke gambar pertama
   slideToIndex(index);
 }, 5000); // 5 detik
+
+// tab foto video
+function openTab(tabName) {
+  // Sembunyikan semua tab
+  document
+    .querySelectorAll(".row")
+    .forEach((tab) => tab.classList.remove("active"));
+  document
+    .querySelectorAll(".tab-btn button")
+    .forEach((btn) => btn.classList.remove("active"));
+
+  // Tampilkan tab yang dipilih
+  document.getElementById(tabName).classList.add("active");
+
+  // Tandai tombol tab aktif
+  event.currentTarget.classList.add("active");
+}

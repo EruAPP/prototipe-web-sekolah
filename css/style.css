@@ -481,11 +481,35 @@ body {
   line-height: 1.6;
 }
 
+.galeri .tab-btn {
+  display: flex;
+  border-bottom: 2px solid white;
+  margin-bottom: 1rem;
+}
+
+.galeri .tab-btn button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  background: white;
+  cursor: pointer;
+  font-family: 700;
+}
+
+.galeri .tab-btn button.active {
+  background: black;
+  color: white;
+}
+
 .galeri .row {
   margin-top: 4rem;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   padding: 0 4px;
+}
+
+.galeri .row.active {
+  display: flex;
 }
 
 .galeri .row .galeri-card {

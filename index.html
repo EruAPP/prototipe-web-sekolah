@@ -298,8 +298,12 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis aut
         nulla dolorum ipsam maiores adipisci!
       </p>
+      <div class="tab-btn">
+        <button class="active" onclick="openTab('foto')">Foto</button>
+        <button onclick="openTab('video')">Video</button>
+      </div>
 
-      <div class="row">
+      <div class="row active" id="foto">
         <div class="galeri-card">
           <img src="img/galeri/foto1.jpg" alt="Gambar 1" />
           <img src="img/galeri/foto4.jpg" alt="Gambar 4" />
@@ -320,6 +324,16 @@
           <img src="img/galeri/foto4.jpg" alt="Gambar 3" />
           <img src="img/galeri/foto5.jpg" alt="Gambar 2" />
         </div>
+      </div>
+
+      <div class="row" id="video">
+        <video controls>
+          <source
+            src="https://www.w3schools.com/html/mov_bbb.mp4"
+            type="video/mp4"
+          />
+          Browser Anda tidak mendukung video.
+        </video>
       </div>
     </section>
     <!-- Akhir Galeri -->
