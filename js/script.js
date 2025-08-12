@@ -54,3 +54,42 @@ function openTab(tabName) {
   // Tandai tombol tab aktif
   event.currentTarget.classList.add("active");
 }
+
+// Pemutar Video lokal
+// const mainVideo = document.querySelector(".main-video video");
+// const videoCards = document.querySelectorAll(".video-card video");
+
+// videoCards.forEach((card) => {
+//   card.addEventListener("click", () => {
+//     // Simpan src dari main video & video yang diklik
+//     const mainSrc = mainVideo.querySelector("source").src;
+//     const clickedSrc = card.querySelector("source").src;
+
+//     // Tukar src
+//     mainVideo.querySelector("source").src = clickedSrc;
+//     card.querySelector("source").src = mainSrc;
+
+//     // Reload video supaya src baru dimainkan
+//     mainVideo.load();
+//     card.load();
+
+//     // Auto play video utama setelah pindah
+//     mainVideo.play();
+//   });
+// });
+
+// Pemutar Video Youtube
+const mainVideo = document.querySelector(".main-video iframe");
+const videoCards = document.querySelectorAll(".video-card img");
+
+videoCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    const newId = card.getAttribute("data-id");
+    const currentMainId = mainVideo.src.split("/embed/")[1].split("?")[0];
+
+    // Swap main video dengan thumbnail
+    mainVideo.src = `https://www.youtube.com/embed/${newId}?autoplay=1`;
+    card.src = `https://img.youtube.com/vi/${currentMainId}/mqdefault.jpg`;
+    card.setAttribute("data-id", currentMainId);
+  });
+});

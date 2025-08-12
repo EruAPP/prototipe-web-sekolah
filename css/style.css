@@ -483,26 +483,29 @@ body {
 
 .galeri .tab-btn {
   display: flex;
-  border-bottom: 2px solid white;
-  margin-bottom: 1rem;
+  border-bottom: 0.2rem solid white;
+  margin-top: 1rem;
+  border-radius: 0.3rem;
 }
 
 .galeri .tab-btn button {
   flex: 1;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 0;
   border: none;
-  background: white;
+  background: none;
+  color: white;
   cursor: pointer;
+  font-size: 1.5rem;
   font-family: 700;
 }
 
 .galeri .tab-btn button.active {
-  background: black;
-  color: white;
+  color: var(--primary);
+  background: white;
 }
 
 .galeri .row {
-  margin-top: 4rem;
+  margin-top: 1.5rem;
   display: none;
   flex-wrap: wrap;
   padding: 0 4px;
@@ -522,6 +525,55 @@ body {
   margin-top: 0.5rem;
   vertical-align: middle;
   width: 100%;
+}
+
+/* galeri video */
+.galeri .row .main-video {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* .galeri .row .main-video video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.3rem;
+  object-fit: cover;
+} */
+
+.galeri .row .main-video iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 8;
+  border-radius: 0.3rem;
+  object-fit: cover;
+}
+
+.galeri .row .video-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+/* .galeri .row .video-card video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.3rem;
+} */
+
+.galeri .row .video-card img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.galeri .row .video-card img:hover {
+  transform: scale(1.05);
 }
 
 /* Kontak */
@@ -716,6 +768,12 @@ footer .credit a {
   .galeri .row .galeri-card {
     flex: 50%;
     max-width: 50%;
+  }
+
+  .galeri .row .video-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   .kontak .row {
