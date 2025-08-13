@@ -93,3 +93,23 @@ videoCards.forEach((card) => {
     card.setAttribute("data-id", currentMainId);
   });
 });
+
+// Simulasi sementara dari database
+document.addEventListener("DOMContentLoaded", function () {
+  // Simulasi HTML dari database
+  const htmlFromDatabase = `
+        <h2>Selamat Datang!</h2>
+        <p>Ini adalah konten <b>HTML</b> yang seolah-olah diambil dari database.</p>
+        <ul>
+          <li>Item Pertama</li>
+          <li>Item Kedua</li>
+        </ul>
+        <p style="color:blue;">Teks ini berwarna biru.</p>
+      `;
+
+  // Pastikan elemen sudah ada
+  const contentDiv = document.getElementById("content-isi-html");
+  if (contentDiv) {
+    contentDiv.innerHTML = htmlFromDatabase;
+  }
+});

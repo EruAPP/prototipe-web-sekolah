@@ -302,7 +302,8 @@ body {
 .nschool,
 .kontak,
 .news,
-.achiv {
+.achiv,
+.html {
   padding: 1rem 7% 1.4rem;
 }
 
@@ -574,6 +575,12 @@ body {
 
 .galeri .row .video-card img:hover {
   transform: scale(1.05);
+}
+
+/* Penampil html */
+.html h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 /* Kontak */
